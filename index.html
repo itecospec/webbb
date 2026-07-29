@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta
+    name="description"
+    content="Ecospec provides attic, cavity wall, commercial, agricultural, FIRETITE, airtightness and advisory insulation services."
+  >
+  <title>Ecospec | Insulation, Airtightness and Advisory Services</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Expandable homepage services — kept here so it works even if styles.css has a broken media block. */
+    .service-card-extra[hidden] { display: none !important; }
+    .service-card-extra:not([hidden]) {
+      display: flex !important;
+      animation: serviceCardReveal .35s ease both;
+    }
+    @keyframes serviceCardReveal {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .services-toggle-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: 34px;
+    }
+    .services-toggle {
+      min-height: 52px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 0 26px;
+      border: 1px solid #087a36;
+      border-radius: 999px;
+      background: #fff;
+      color: #087a36;
+      font: inherit;
+      font-weight: 900;
+      cursor: pointer;
+      transition: .2s ease;
+    }
+    .services-toggle:hover,
+    .services-toggle:focus-visible {
+      transform: translateY(-2px);
+      background: #087a36;
+      color: #fff;
+      box-shadow: 0 12px 28px rgba(8,122,54,.18);
+    }
+    @media (max-width: 680px) {
+      .services-toggle { width: 100%; }
+    }
+  </style>
+</head>
+
+<body>
+ 
+
+  <header class="header">
+    <div class="wrap header-inner">
+            <img
+          class="logo"
+          src="images/Ecospeclogo.png"
+          alt="Ecospec"
+        >
+      </a>
+
+
+      <button class="menu-btn" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+      </button>
+
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+
+          <li class="nav-item">
+            <button class="drop-btn" type="button">
+              Services <span class="chev" aria-hidden="true"></span>
+            </button>
+
+            <ul class="dropdown">
+             <a href="index.html#services">All Services</a>
+              <li><a href="attic-insulation.html">Attic Insulation</a></li>
+              <li><a href="cavity-wall-insulation.html">Cavity Wall Insulation</a></li>
+              <li><a href="commercial-insulation.html">Commercial Insulation</a></li>
+              <li><a href="agricultural-insulation.html">Agricultural Insulation</a></li>
+              <li><a href="firetite-insulation.html">FIRETITE Insulation</a></li>
+              <li><a href="airtightness.html">Airtightness</a></li>
+              <li><a href="advisory-services.html">Advisory Services</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="grants.html">Grants</a></li>
+          <li class="nav-item"><a class="nav-link" href="technical-data.html">Technical D</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <a class="cta" href="contact.html">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-media" aria-hidden="true"></div>
+
+      <div class="wrap hero-inner">
+        <div class="hero-content">
+          <div class="eyebrow">Expert Insulation</div>
+          <h1>Save Heat,<br>Save Money.</h1>
+          <p>
+            Expertly installed insulation solutions designed to improve comfort, reduce energy bills, and protect your building long term.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="services.html">Explore Services</a>
+            <a class="btn btn-secondary" href="contact.html">Request a Free Quote</a>
+          </div>
+        </div>
+      </div>
+
+     <div class="hero-card">
+  <div class="hero-card-icon">
+    <img src="images/ecospecimg.png" alt="">
+  </div>
+  <div>
+          <strong>Solutions matched to your property</strong>
+          <span>Clear advice from survey through to completion.</span>
+        </div>
+      </div>
+
+      <a class="hero-seai" href="grants.html" aria-label="SEAI registered">
+        <img src="images/seailogo.png" alt="SEAI - Sustainable Energy Authority of Ireland">
+      </a>
+
+      <div class="hero-details">
+        <a href="tel:(046) 955 8479">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.4 15.4 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.7 21 3 13.3 3 3.8c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1l-2.2 2.1z"/></svg>
+         (046) 955 8479
+        </a>
+        <a href="mailto:info@ecospec.ie">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          info@ecospec.ie
+        </a>
+        <span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+          Moynalvey, Summerhill, Co Meath
+        </span>
+      </div>
+
+      <div class="wave" aria-hidden="true"></div>
+    </section>
+
+   <section class="page-intro">
+    <div class="wrap page-intro-grid">
+
+        <div class="page-intro-copy">
+            <div class="eyebrow" style="color:var(--green-dark)">What we do</div>
+
+            <h2>Professional solutions without unnecessary complication.</h2>
+
+            <p>
+                At Ecospec, we specialise in insulation and airtightness solutions
+                for homes and businesses across Ireland. With over 15 years of
+                experience, we deliver high-quality workmanship using premium
+                materials and a meticulous approach.
+            </p>
+
+            <p>
+                Based in the heart of Co. Meath, we create warmer, healthier and
+                more energy-efficient spaces while helping to reduce energy costs.
+                From start to finish, we are committed to delivering reliable
+                results and a professional service you can trust.
+            </p>
+
+            <a href="contact.html" class="cta">Get a Free Quote</a>
+
+        </div>
+
+        <div class="page-intro-image">
+           <img src="images/franimg.jpg" alt="">
+        </div>
+
+    </div>
+</section>
+
+    <section class="services" id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Our core<br>services.</h2>
+          <p>
+            Each service has its own dedicated page, making it easy to understand
+            the work involved and contact Ecospec about the right solution.
+          </p>
+        </div>
+
+        <div class="service-grid" id="homeServiceGrid">
+
+          <article class="service-card">
+            <a class="service-card-link" href="attic-insulation.html" aria-label="View attic insulation"></a>
+            <img class="service-card-image" src="images/franimg.jpg" alt="Attic insulation being installed">
+            <div class="service-card-content">
+              <div class="service-icon">▦</div>
+              <h3>Attic Insulation</h3>
+              <p>Improve comfort and reduce heat loss through the roof space.</p>
+              <span class="service-link">Learn more <span>→</span></span>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <a class="service-card-link" href="cavity-wall-insulation.html" aria-label="View cavity wall insulation"></a>
+            <img class="service-card-image" src="images/cavitywall.jpeg" alt="Cavity wall insulation being installed">
+            <div class="service-card-content">
+              <div class="service-icon">▦</div>
+              <h3>Cavity Wall Insulation</h3>
+              <p>A targeted solution for suitable cavity-wall properties.</p>
+              <span class="service-link">Learn more <span>→</span></span>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <a class="service-card-link" href="agricultural-insulation.html" aria-label="View agricultural insulation"></a>
+            <img class="service-card-image" src="images/agri.jpeg" alt="Agricultural building insulation">
+            <div class="service-card-content">
+              <div class="service-icon">▦</div>
+              <h3>Agricultural Insulation</h3>
+              <p>Practical insulation solutions for farm buildings, sheds, workshops and agricultural premises.</p>
+              <span class="service-link">Learn more <span>→</span></span>
+            </div>
+          </article>
+
+          <article class="service-card service-card-extra" hidden>
+            <a class="service-card-link" href="commercial-insulation.html" aria-label="View commercial insulation"></a>
+            <img class="service-card-image" src="images/commercial.jpeg" alt="Commercial insulation project" onerror="this.onerror=null;this.src='images/franimg.jpg';">
+            <div class="service-card-content">
+              <div class="service-icon">▦</div>
+              <h3>Commercial Insulation</h3>
+              <p>Insulation support for offices, industrial units and commercial premises.</p>
+              <span class="service-link">Learn more <span>→</span></span>
+            </div>
+          </article>
+
+          <article class="service-card service-card-extra" hidden>
+            <a class="service-card-link" href="firetite-insulation.html" aria-label="View FIRETITE insulation"></a>
+            <img class="service-card-image" src="images/firetite.jpeg" alt="FIRETITE insulation system" onerror="this.onerror=null;this.src='images/franimg.jpg';">
+            <div class="service-card-content">
+              <div class="service-icon">▦</div>
+              <h3>FIRETITE Insulation</h3>
+              <p>A specialist insulation solution designed for demanding building applications.</p>
+              <span class="service-link">Learn more <span>→</span></span>
+            </div>
+          </article>
+
+          <article class="service-card service-card-extra" hidden>
+            <a class="service-card-link" href="airtightness.html" aria-label="View airtightness services"></a>
+            <img class="service-card-image" src="images/airtightness.jpeg" alt="Airtightness work" onerror="this.onerror=null;this.src='images/advice.png';">
+            <div class="service-card-content">
+              <div class="service-icon">▦</div>
+              <h3>Airtightness</h3>
+              <p>Reduce uncontrolled air leakage and improve building comfort and performance.</p>
+              <span class="service-link">Learn more <span>→</span></span>
+            </div>
+          </article>
+
+          <article class="service-card service-card-extra" hidden>
+            <a class="service-card-link" href="advisory-services.html" aria-label="View advisory services"></a>
+            <img class="service-card-image" src="images/advisory.jpeg" alt="Ecospec advisory services" onerror="this.onerror=null;this.src='images/advice.png';">
+            <div class="service-card-content">
+              <div class="service-icon">▦</div>
+              <h3>Advisory Services</h3>
+              <p>Clear technical guidance to help you choose the right approach for your property.</p>
+              <span class="service-link">Learn more <span>→</span></span>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="services-toggle-wrap">
+          <button
+            class="services-toggle"
+            id="servicesToggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="homeServiceGrid"
+          >
+            <span class="services-toggle-label">See all services</span>
+            <span class="services-toggle-icon" aria-hidden="true">↓</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="why" id="why">
+      <div class="wrap why-grid">
+        <div class="visual">
+          <img
+            class="visual-image"
+            src="images/advice.png"
+            alt="Ecospec team installing insulation">
+          <div class="badge">
+		  
+        
+            <span>Clear advice. Quality installation.</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="eyebrow" style="color:var(--green-dark)">Why Ecospec</div>
+
+          <div class="section-head" style="display:block;margin-bottom:0">
+            <h2>Technical knowledge.<br>Practical results.</h2>
+            <p style="margin-top:18px">
+              We aim to make every project straightforward, from the first
+              conversation to the completed work.
+            </p>
+          </div>
+
+          <div class="features">
+            <div class="feature">
+              <div class="feature-icon">01</div>
+              <div>
+                <h3>Clear recommendations</h3>
+                <p>Advice based on the building, project requirements and intended outcome.</p>
+              </div>
+            </div>
+
+            <div class="feature">
+              <div class="feature-icon">02</div>
+              <div>
+                <h3>Appropriate solutions</h3>
+                <p>We recommend only the services and materials suitable for the project.</p>
+              </div>
+            </div>
+
+            <div class="feature">
+              <div class="feature-icon">03</div>
+              <div>
+                <h3>Professional support</h3>
+                <p>Responsive communication and practical guidance throughout the work.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grant" id="grants">
+      <div class="wrap grant-box">
+        <div>
+          <h2>Looking for information on insulation grants?</h2>
+          <p>
+            Visit our grants page for a clear overview and contact Ecospec to
+            discuss the work required for your property.
+          </p>
+        </div>
+
+        <a class="cta" href="grants.html">View Grants</a>
+      </div>
+    </section>
+
+    <section class="simple-cta">
+      <div class="wrap simple-cta-inner">
+        <div>
+          <h2>Talk to Ecospec about your project.</h2>
+          <p>
+            Tell us about the building and the service you need. Our team can
+            review the details and advise on the appropriate next step.
+          </p>
+        </div>
+
+        <a class="cta" href="contact.html">Request a Quote</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <img class="footer-logo" src="images/Ecospeclogo.png" alt="Ecospec">
+          <p>
+            Insulation, airtightness and advisory services for residential,
+            commercial and agricultural properties.
+          </p>
+        </div>
+
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="attic-insulation.html">Attic Insulation</a></li>
+            <li><a href="cavity-wall-insulation.html">Cavity Wall Insulation</a></li>
+            <li><a href="firetite-insulation.html">FIRETITE Insulation</a></li>
+            <li><a href="airtightness.html">Airtightness</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="grants.html">Grants</a></li>
+            <li><a href="technical-library.html">Technical Library</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><a href="tel:+35310000000">01 000 0000</a></li>
+            <li><a href="mailto:info@ecospec.ie">info@ecospec.ie</a></li>
+            <li>Ireland</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">
+        © <span id="year"></span> Ecospec. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <a class="quote-tab" href="contact.html">Request a Quote</a>
+
+  <script src="js/script.js" defer></script>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const button = document.getElementById("servicesToggle");
+      const extraCards = Array.from(document.querySelectorAll(".service-card-extra"));
+
+      if (!button || extraCards.length === 0) return;
+
+      // Always begin with only the three core services visible.
+      extraCards.forEach(function (card) {
+        card.hidden = true;
+      });
+      button.setAttribute("aria-expanded", "false");
+
+      button.addEventListener("click", function () {
+        const shouldOpen = button.getAttribute("aria-expanded") !== "true";
+
+        extraCards.forEach(function (card) {
+          card.hidden = !shouldOpen;
+        });
+
+        button.setAttribute("aria-expanded", String(shouldOpen));
+        button.querySelector(".services-toggle-label").textContent =
+          shouldOpen ? "Show fewer services" : "See all services";
+        button.querySelector(".services-toggle-icon").textContent =
+          shouldOpen ? "↑" : "↓";
+      });
+    });
+  </script>
+
+</body>
+</html>

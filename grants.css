@@ -1,0 +1,120 @@
+.grants-page{overflow:hidden;background:#fff}
+.grants-page section{padding:92px 0}
+.grant-green{color:var(--green-dark)}
+
+.grants-hero{position:relative;min-height:690px;display:grid;align-items:center;overflow:hidden;background:#183426}
+.grants-hero-media{position:absolute;inset:0;background:url("images/ecospec-hero.jpg") center/cover no-repeat}
+.grants-hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,30,21,.9),rgba(12,30,21,.55) 56%,rgba(12,30,21,.12)),radial-gradient(circle at 78% 25%,rgba(116,191,46,.25),transparent 30%)}
+.grants-hero-inner{position:relative;z-index:2;padding:95px 0 135px}
+.grants-hero-copy{max-width:760px;color:#fff}
+.grants-hero-copy h1{max-width:760px;color:#fff}
+.grants-hero-copy p{max-width:660px;margin:27px 0 33px;color:rgba(255,255,255,.86);font-size:clamp(1.05rem,1.7vw,1.3rem)}
+.grant-hero-card{position:absolute;z-index:4;right:0;bottom:145px;width:min(390px,90%);padding:25px 38px;border-radius:20px 0 0 20px;background:rgba(255,255,255,.95);box-shadow:var(--shadow)}
+.grant-hero-card span,.grant-hero-card small{display:block;color:var(--muted)}
+.grant-hero-card span{font-size:.75rem;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+.grant-hero-card strong{display:block;margin:6px 0;color:var(--green-dark);font-size:3.15rem;line-height:1}
+
+.grant-intro{background:#fff}
+.grant-intro-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:75px;align-items:start}
+.grant-intro h2,.eligibility-copy h2,.one-stop-copy h2,.warmer-homes h2{margin:0;color:var(--charcoal);font-size:clamp(2.3rem,4.3vw,4rem);line-height:1.05;letter-spacing:-1.8px}
+.grant-intro-copy p,.eligibility-copy>p,.one-stop-copy>p,.warmer-homes p{margin:0 0 18px;color:var(--muted);font-size:1.06rem;line-height:1.8}
+.grant-route-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:58px}
+.grant-route-card{min-height:300px;display:flex;flex-direction:column;padding:30px;border:1px solid var(--line);border-radius:var(--radius);background:var(--off);transition:.22s ease}
+.grant-route-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);background:#fff}
+.route-number{margin-bottom:auto;color:var(--green-dark);font-size:.82rem;font-weight:900;letter-spacing:.15em}
+.grant-route-card h3{margin:42px 0 10px;color:var(--charcoal);font-size:1.55rem}
+.grant-route-card p{margin:0 0 22px;color:var(--muted)}
+.grant-route-card a,.value-card a{font-weight:900;color:var(--green-dark)}
+.grant-route-card a span,.value-card a span{color:var(--green)}
+
+.grant-values{background:var(--off)}
+.grant-card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.value-card{min-height:270px;display:flex;flex-direction:column;padding:28px;border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:0 10px 30px rgba(22,45,29,.06)}
+.value-card.featured{background:var(--green-dark);color:#fff;border-color:transparent}
+.value-card-top span{display:block;margin-bottom:14px;color:var(--green-dark);font-size:.78rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.value-card-top strong{display:block;color:var(--charcoal);font-size:2rem;line-height:1.1}
+.value-card p{margin:20px 0 24px;color:var(--muted);line-height:1.7}
+.value-card a{margin-top:auto}
+.value-card.featured .value-card-top span{color:var(--green)}
+.value-card.featured .value-card-top strong,.value-card.featured a{color:#fff}
+.value-card.featured p{color:rgba(255,255,255,.73)}
+.grant-disclaimer{margin-top:25px;padding:19px 22px;border-left:4px solid var(--green);border-radius:0 14px 14px 0;background:#fff;color:var(--muted)}
+.grant-disclaimer strong{color:var(--charcoal)}
+
+.eligibility-section{background:#fff}
+.eligibility-grid{display:grid;grid-template-columns:1.05fr .75fr;gap:80px;align-items:center}
+.grant-check-list{display:grid;gap:14px;margin:30px 0 0;padding:0;list-style:none}
+.grant-check-list li{position:relative;padding-left:35px;color:var(--charcoal);font-weight:700}
+.grant-check-list li:before{content:"✓";position:absolute;left:0;top:0;width:23px;height:23px;display:grid;place-items:center;border-radius:50%;background:var(--green-dark);color:#fff;font-size:.75rem}
+.eligibility-panel{padding:34px;border-radius:25px;background:var(--charcoal);color:#fff;box-shadow:var(--shadow)}
+.panel-label{display:block;margin-bottom:21px;color:var(--green);font-size:.76rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.eligibility-item{padding:19px 0;border-top:1px solid rgba(255,255,255,.13)}
+.eligibility-item strong,.eligibility-item span{display:block}
+.eligibility-item strong{margin-bottom:4px;font-size:1.1rem}
+.eligibility-item span{color:rgba(255,255,255,.65)}
+
+.property-table-section{background:#f3f6f1}
+.grant-table-wrap{overflow-x:auto;border-radius:20px;background:#fff;box-shadow:var(--shadow)}
+.grant-table{width:100%;border-collapse:collapse;min-width:800px}
+.grant-table th,.grant-table td{padding:20px 22px;text-align:left;border-bottom:1px solid var(--line)}
+.grant-table thead th{background:var(--green-dark);color:#fff;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase}
+.grant-table tbody th{color:var(--charcoal)}
+.grant-table tbody td{color:var(--muted);font-weight:700}
+.grant-table tbody tr:last-child th,.grant-table tbody tr:last-child td{border-bottom:0}
+
+.one-stop-section{background:var(--charcoal);color:#fff}
+.one-stop-grid{display:grid;grid-template-columns:.7fr 1.1fr;gap:80px;align-items:center}
+.one-stop-card{min-height:420px;display:flex;flex-direction:column;justify-content:flex-end;padding:38px;border-radius:28px;background:linear-gradient(150deg,var(--green),var(--green-dark));box-shadow:0 25px 65px rgba(0,0,0,.22)}
+.one-stop-card span{margin-bottom:auto;font-size:.75rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.one-stop-card strong{font-size:clamp(2.5rem,4vw,4.2rem);line-height:1}
+.one-stop-card p{margin:18px 0 0;color:rgba(255,255,255,.78);font-size:1.05rem}
+.one-stop-copy h2{color:#fff}
+.one-stop-copy>p{color:rgba(255,255,255,.7)}
+.process-list{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:29px}
+.process-list>div{display:grid;grid-template-columns:43px 1fr;gap:13px;padding:18px;border-radius:16px;background:rgba(255,255,255,.07)}
+.process-list span{width:43px;height:43px;display:grid;place-items:center;border-radius:13px;background:rgba(255,255,255,.12);color:var(--green);font-weight:900}
+.process-list p{margin:0;color:rgba(255,255,255,.68)}
+.process-list strong{color:#fff}
+
+.warmer-homes{background:#fff}
+.warmer-homes-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:75px;align-items:start}
+.warmer-criteria{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.warmer-criteria article{padding:26px;border-radius:19px;background:var(--off);border:1px solid var(--line)}
+.warmer-criteria strong{color:var(--green-dark);font-size:1.17rem}
+.warmer-criteria p{margin:9px 0 0;font-size:.96rem;line-height:1.65}
+
+.grant-steps{background:var(--off)}
+.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.steps-grid article{min-height:265px;padding:29px;border-radius:20px;background:#fff;border:1px solid var(--line)}
+.steps-grid span{width:48px;height:48px;display:grid;place-items:center;border-radius:14px;background:var(--green-dark);color:#fff;font-weight:900}
+.steps-grid h3{margin:40px 0 9px;color:var(--charcoal)}
+.steps-grid p{margin:0;color:var(--muted)}
+
+.grant-final-cta{background:linear-gradient(120deg,rgba(61,63,66,.98),rgba(35,48,40,.98));color:#fff}
+.grant-final-inner{display:grid;grid-template-columns:1fr auto;gap:50px;align-items:center}
+.grant-final-cta h2{margin:0 0 13px;color:#fff;font-size:clamp(2.2rem,4vw,3.8rem);line-height:1.04}
+.grant-final-cta p{max-width:760px;margin:0;color:rgba(255,255,255,.72);font-size:1.05rem}
+
+@media(max-width:1050px){
+  .grant-route-grid,.grant-card-grid{grid-template-columns:repeat(2,1fr)}
+  .grant-intro-grid,.eligibility-grid,.one-stop-grid,.warmer-homes-grid{grid-template-columns:1fr;gap:45px}
+  .steps-grid{grid-template-columns:repeat(2,1fr)}
+  .grant-hero-card{display:none}
+}
+
+@media(max-width:680px){
+  .grants-page section{padding:64px 0}
+  .grants-hero{min-height:auto;display:block}
+  .grants-hero-media{background-position:60% center}
+  .grants-hero-overlay{background:linear-gradient(180deg,rgba(12,30,21,.45),rgba(12,30,21,.9) 62%)}
+  .grants-hero-inner{padding:115px 0 105px}
+  .grants-hero-copy h1{font-size:clamp(2.8rem,14vw,4rem)}
+  .grants-hero .wave{display:none}
+  .grant-route-grid,.grant-card-grid,.warmer-criteria,.steps-grid,.process-list{grid-template-columns:1fr}
+  .grant-route-card,.value-card{min-height:auto}
+  .grant-route-card .route-number{margin-bottom:35px}
+  .grant-intro h2,.eligibility-copy h2,.one-stop-copy h2,.warmer-homes h2{font-size:clamp(2rem,10vw,2.8rem)}
+  .one-stop-card{min-height:340px;padding:28px}
+  .grant-final-inner{grid-template-columns:1fr;gap:27px}
+  .grant-final-inner .cta{width:100%}
+}

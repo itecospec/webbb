@@ -1,0 +1,598 @@
+
+.attic-page {
+  overflow: hidden;
+}
+
+.attic-green {
+  color: var(--green-dark);
+}
+
+/* HERO */
+
+.attic-hero {
+  position: relative;
+  min-height: 720px;
+  display: grid;
+  align-items: center;
+  overflow: hidden;
+  background: #10271d;
+}
+
+.attic-hero-image {
+  position: absolute;
+  inset: 0;
+  background: url("images/franimg.jpg") center / cover no-repeat;
+  transform: scale(1.02);
+}
+
+.attic-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(7,27,19,.97) 0%, rgba(7,27,19,.86) 46%, rgba(7,27,19,.26) 100%),
+    linear-gradient(180deg, transparent 55%, rgba(7,27,19,.45));
+}
+
+.attic-hero-inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0,1fr) 360px;
+  gap: 70px;
+  align-items: end;
+  padding: 110px 0 105px;
+}
+
+.attic-hero-copy {
+  max-width: 780px;
+  color: #fff;
+}
+
+.attic-hero-copy h1 {
+  max-width: 780px;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(3.3rem, 6.5vw, 6.5rem);
+  line-height: .96;
+  letter-spacing: -.055em;
+}
+
+.attic-hero-copy p {
+  max-width: 660px;
+  margin: 28px 0 0;
+  color: rgba(255,255,255,.82);
+  font-size: clamp(1.05rem,1.6vw,1.25rem);
+  line-height: 1.75;
+}
+
+.attic-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 36px;
+}
+
+.attic-hero-panel {
+  padding: 30px;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 24px;
+  background: rgba(255,255,255,.11);
+  color: #fff;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 22px 65px rgba(0,0,0,.2);
+}
+
+.attic-panel-label {
+  display: block;
+  margin-bottom: 20px;
+  color: rgba(255,255,255,.62);
+  font-size: .75rem;
+  font-weight: 900;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.attic-hero-panel > div {
+  display: grid;
+  grid-template-columns: 55px 1fr;
+  gap: 16px;
+  align-items: start;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255,255,255,.16);
+}
+
+.attic-hero-panel strong {
+  color: var(--green);
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.attic-hero-panel p {
+  margin: 0;
+  color: rgba(255,255,255,.76);
+  line-height: 1.55;
+}
+
+/* INTRO */
+
+.attic-intro {
+  padding: 115px 0;
+  background: #fff;
+}
+
+.attic-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,.9fr);
+  gap: clamp(55px,8vw,120px);
+  align-items: start;
+}
+
+.attic-intro h2 {
+  max-width: 720px;
+  margin: 18px 0 0;
+  color: var(--charcoal);
+  font-size: clamp(2.5rem,4.5vw,4.6rem);
+  line-height: 1.04;
+  letter-spacing: -.045em;
+}
+
+.attic-intro-copy {
+  padding-top: 30px;
+}
+
+.attic-intro-copy p {
+  margin: 0 0 20px;
+  color: #5f6963;
+  font-size: 1.02rem;
+  line-height: 1.85;
+}
+
+.attic-intro-copy .attic-lead {
+  color: var(--green-dark);
+  font-size: 1.3rem;
+  line-height: 1.62;
+  font-weight: 700;
+}
+
+/* MATERIAL SECTIONS */
+
+
+
+/* MATERIAL SECTIONS */
+
+.attic-material {
+  padding: 115px 0;
+}
+
+.attic-material-wool {
+  background: var(--off);
+}
+
+.attic-material-foam {
+  background: #fff;
+}
+
+.attic-material-grid {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,.92fr);
+  gap: clamp(55px,8vw,115px);
+  align-items: center;
+}
+
+.attic-material-grid-reverse {
+  grid-template-columns: minmax(0,.92fr) minmax(0,1fr);
+}
+
+.attic-material-image {
+  position: relative;
+  min-height: 620px;
+  overflow: hidden;
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.attic-material-image img {
+  width: 100%;
+  height: 620px;
+  object-fit: cover;
+}
+
+.attic-material-badge {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  max-width: 270px;
+  padding: 22px 25px;
+  border-radius: 18px;
+  background: var(--green-dark);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.attic-material-badge span {
+  display: block;
+  margin-bottom: 6px;
+  color: rgba(255,255,255,.66);
+  font-size: .72rem;
+  font-weight: 900;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.attic-material-badge strong {
+  display: block;
+  font-size: 1.45rem;
+}
+
+.attic-material-copy h2 {
+  margin: 17px 0 25px;
+  color: var(--charcoal);
+  font-size: clamp(2.5rem,4.2vw,4.4rem);
+  line-height: 1.05;
+  letter-spacing: -.045em;
+}
+
+.attic-material-copy p {
+  margin: 0 0 19px;
+  color: var(--muted);
+  line-height: 1.84;
+}
+
+.attic-material-copy .attic-material-lead {
+  color: var(--green-dark);
+  font-size: 1.25rem;
+  line-height: 1.62;
+  font-weight: 700;
+}
+
+.attic-material-list {
+  display: grid;
+  gap: 13px;
+  margin: 29px 0 32px;
+  padding: 0;
+  list-style: none;
+}
+
+.attic-material-list li {
+  position: relative;
+  padding-left: 33px;
+  color: var(--green-dark);
+  font-weight: 800;
+}
+
+.attic-material-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 21px;
+  height: 21px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--green-dark);
+  color: #fff;
+  font-size: .7rem;
+}
+
+
+/* PROCESS */
+
+.attic-process {
+  padding: 110px 0;
+  background: #fff;
+}
+
+.attic-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4,minmax(0,1fr));
+  gap: 18px;
+}
+
+.attic-process-grid article {
+  min-height: 290px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: #fff;
+  transition: .25s ease;
+}
+
+.attic-process-grid article:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.attic-process-grid span {
+  margin-bottom: auto;
+  color: var(--green);
+  font-size: .8rem;
+  font-weight: 900;
+  letter-spacing: .14em;
+}
+
+.attic-process-grid h3 {
+  margin: 45px 0 12px;
+  color: var(--charcoal);
+  font-size: 1.35rem;
+}
+
+.attic-process-grid p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* SUITABILITY */
+
+.attic-suitability {
+  padding: 115px 0;
+  background: #f2f5f0;
+}
+
+.attic-suitability-grid {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,.9fr);
+  gap: clamp(55px,8vw,115px);
+  align-items: center;
+}
+
+.attic-suitability-image {
+  min-height: 590px;
+  overflow: hidden;
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.attic-suitability-image img {
+  width: 100%;
+  height: 590px;
+  object-fit: cover;
+}
+
+.attic-suitability-copy h2 {
+  margin: 17px 0 24px;
+  color: var(--charcoal);
+  font-size: clamp(2.5rem,4vw,4.2rem);
+  line-height: 1.05;
+  letter-spacing: -.045em;
+}
+
+.attic-suitability-copy p {
+  margin: 0 0 19px;
+  color: var(--muted);
+  line-height: 1.82;
+}
+
+.attic-check-list {
+  display: grid;
+  gap: 12px;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.attic-check-list li {
+  position: relative;
+  padding-left: 32px;
+  color: var(--green-dark);
+  font-weight: 800;
+}
+
+.attic-check-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 21px;
+  height: 21px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--green-dark);
+  color: #fff;
+  font-size: .7rem;
+}
+
+/* GRANT */
+
+.attic-grant {
+  padding: 85px 0;
+  background: var(--charcoal);
+  color: #fff;
+}
+
+.attic-grant-inner {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) auto;
+  gap: 50px;
+  align-items: center;
+}
+
+.attic-grant h2 {
+  margin: 15px 0 14px;
+  color: #fff;
+  font-size: clamp(2.2rem,4vw,3.8rem);
+  line-height: 1.05;
+}
+
+.attic-grant p {
+  max-width: 760px;
+  margin: 0;
+  color: rgba(255,255,255,.72);
+  line-height: 1.75;
+}
+
+.attic-grant-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.attic-grant-actions > a:last-child {
+  color: #fff;
+  font-weight: 900;
+}
+
+.attic-grant-actions > a:last-child span {
+  color: var(--green);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1050px) {
+  .attic-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .attic-hero-panel {
+    max-width: 480px;
+  }
+
+  .attic-intro-grid,
+  .attic-suitability-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .attic-process-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+
+  .attic-suitability-image,
+  .attic-suitability-image img {
+    min-height: 480px;
+    height: 480px;
+  }
+}
+
+@media (max-width: 760px) {
+  .attic-hero {
+    min-height: auto;
+  }
+
+  .attic-hero-image {
+    background-position: 60% center;
+  }
+
+  .attic-hero-overlay {
+    background: rgba(7,27,19,.83);
+  }
+
+  .attic-hero-inner {
+    padding: 95px 0 70px;
+  }
+
+  .attic-hero-actions {
+    display: grid;
+  }
+
+  .attic-hero-actions .btn {
+    width: 100%;
+  }
+
+  .attic-intro,
+  .attic-options,
+  .attic-comparison,
+  .attic-process,
+  .attic-suitability {
+    padding: 75px 0;
+  }
+
+  .attic-intro-grid {
+    gap: 32px;
+  }
+
+  .attic-intro-copy {
+    padding-top: 0;
+  }
+
+  .attic-option-content {
+    padding: 28px 24px;
+  }
+
+  .attic-option-number {
+    top: 24px;
+    right: 24px;
+    font-size: 3.7rem;
+  }
+
+  .attic-process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .attic-process-grid article {
+    min-height: 240px;
+  }
+
+  .attic-suitability-image,
+  .attic-suitability-image img {
+    min-height: 360px;
+    height: 360px;
+  }
+
+  .attic-grant-inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .attic-grant-actions {
+    align-items: stretch;
+  }
+
+  .attic-grant-actions .cta {
+    width: 100%;
+  }
+
+  .attic-grant-actions > a:last-child {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1050px) {
+  .attic-material-grid,
+  .attic-material-grid-reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .attic-material-foam .attic-material-image {
+    order: -1;
+  }
+
+  .attic-material-image,
+  .attic-material-image img {
+    min-height: 500px;
+    height: 500px;
+  }
+}
+
+@media (max-width: 760px) {
+  .attic-material {
+    padding: 75px 0;
+  }
+
+  .attic-material-grid,
+  .attic-material-grid-reverse {
+    gap: 38px;
+  }
+
+  .attic-material-image,
+  .attic-material-image img {
+    min-height: 360px;
+    height: 360px;
+  }
+
+  .attic-material-badge {
+    right: 14px;
+    bottom: 14px;
+    max-width: calc(100% - 28px);
+    padding: 18px 20px;
+  }
+
+  .attic-material-copy h2 {
+    font-size: clamp(2.2rem,10vw,3.2rem);
+  }
+}
