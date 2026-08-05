@@ -129,9 +129,57 @@
     .feature-icon{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;background:#fff;color:var(--green-dark);box-shadow:0 8px 20px rgba(0,0,0,.06);font-weight:900}
     .feature h3{margin:0 0 5px;color:var(--charcoal)}.feature p{margin:0;color:var(--muted)}
 
-    .grant{padding:72px 0;background:var(--charcoal);color:#fff}
-    .grant-box{display:grid;grid-template-columns:1fr auto;align-items:center;gap:35px}
-    .grant h2{font-size:clamp(2rem,4vw,3.6rem);line-height:1.05;margin:0 0 15px}.grant p{margin:0;color:rgba(255,255,255,.75);max-width:760px}
+    .grant{
+  padding:76px 0;
+  background:
+    radial-gradient(circle at 88% 18%, rgba(116,191,46,.22), transparent 28%),
+    linear-gradient(120deg, #3d3f42, #262d29);
+  color:var(--white);
+}
+
+.grant-box{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;
+  gap:40px;
+}
+
+.grant h2{
+  max-width:850px;
+  margin:0 0 14px;
+  font-size:clamp(2rem,4vw,3.6rem);
+  line-height:1.05;
+  letter-spacing:-1.4px;
+}
+
+.grant p{
+  max-width:780px;
+  margin:0;
+  color:rgba(255,255,255,.76);
+  font-size:1.05rem;
+}
+
+.cta-buttons{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.cta-secondary{
+  background:transparent;
+  color:var(--white);
+  border:2px solid rgba(255,255,255,.78);
+  box-shadow:none;
+}
+
+.cta-secondary:hover{
+  background:var(--white);
+  color:var(--charcoal);
+  border-color:var(--white);
+  box-shadow:0 12px 28px rgba(0,0,0,.16);
+}
 
     .quote{background:#fff}
     .quote-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}
@@ -150,7 +198,6 @@
     .copyright{border-top:1px solid rgba(255,255,255,.12);margin-top:38px;padding-top:22px;color:rgba(255,255,255,.55);font-size:.9rem}
     .quote-tab{position:fixed;right:0;top:46%;z-index:40;background:linear-gradient(180deg,var(--green),var(--green-2));color:#fff;padding:20px 11px;writing-mode:vertical-rl;transform:rotate(180deg);font-weight:900;border-radius:0 14px 14px 0;box-shadow:0 12px 30px rgba(0,0,0,.18)}
 
-}
 .home-visual {
   position: relative;
   width: 100%;
@@ -298,41 +345,6 @@
   color: var(--charcoal);
 }
 
-.simple-cta {
-  background:
-    linear-gradient(120deg, rgba(61,63,66,.98), rgba(38,45,41,.96)),
-    radial-gradient(circle at 85% 20%, rgba(116,191,46,.28), transparent 26%);
-  color: var(--white);
-}
-
-.simple-cta-inner {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 36px;
-  align-items: center;
-}
-
-.simple-cta h2 {
-  margin: 0 0 12px;
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  line-height: 1.04;
-}
-
-.simple-cta p {
-  margin: 0;
-  max-width: 760px;
-  color: rgba(255,255,255,.76);
-}
-
-@media (max-width: 760px) {
-  .simple-cta-inner {
-    grid-template-columns: 1fr;
-  }
-
-  .simple-cta .cta {
-    width: 100%;
-  }
-}
 /* ===== Mobile fixes: hero badge + details strip ===== */
 
 @media (max-width: 1050px) {
@@ -710,7 +722,7 @@ body {
 
   .page-intro h2,
   .section-head h2,
-  .simple-cta h2 {
+  .grant h2 {
     font-size: clamp(2rem, 10vw, 2.8rem);
     letter-spacing: -1px;
   }
@@ -770,15 +782,19 @@ body {
     padding: 58px 0;
   }
 
-  .grant-box,
-  .simple-cta-inner {
-    grid-template-columns: 1fr;
-    gap: 24px;
+  .grant-box{
+    grid-template-columns:1fr;
+    gap:28px;
   }
 
-  .grant-box .cta,
-  .simple-cta .cta {
-    width: 100%;
+  .cta-buttons{
+    width:100%;
+    display:grid;
+    grid-template-columns:1fr;
+  }
+
+  .cta-buttons .cta{
+    width:100%;
   }
 
   .footer-grid {
@@ -1613,7 +1629,7 @@ body {
 
 .service-grid.show-all-services .service-card-extra {
   display: flex;
-  animation: service-card-reveal .35s ease both;
+  animation: service-card-reveal .35s ease;
 }
 
 @keyframes service-card-reveal {
@@ -1819,5 +1835,68 @@ body {
 
   .nav.open {
     max-height: calc(100vh - 74px);
+  }
+}
+/* =========================================================
+   STRAIGHT HERO BOTTOM
+   Removes the angled/wave edge and keeps the hero finish clean.
+   ========================================================= */
+.hero .wave {
+  display: none !important;
+}
+
+.hero {
+  border-bottom: 0;
+}
+
+/* Keep the contact strip aligned neatly with the straight edge. */
+.hero-details {
+  bottom: 0;
+  border-radius: 18px 0 0 0;
+}
+
+@media (max-width: 1050px) {
+  .hero-details {
+    border-radius: 0;
+  }
+}\n\n/* =========================================================
+   SERVICE CARD HOVER FIX
+   Keeps every visible and revealed service card consistent.
+   ========================================================= */
+.service-card {
+  transform: translateY(0);
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+  will-change: transform;
+}
+
+.service-card:hover,
+.service-card:focus-within {
+  transform: translateY(-7px);
+  box-shadow: 0 24px 60px rgba(22,45,29,.20);
+}
+
+.service-card .service-card-image {
+  transition: transform .4s ease;
+}
+
+.service-card:hover .service-card-image,
+.service-card:focus-within .service-card-image {
+  transform: scale(1.04);
+}
+
+/* The reveal animation must finish without retaining transform,
+   otherwise it blocks the hover transform on extra cards. */
+.service-grid.show-all-services .service-card-extra {
+  animation-fill-mode: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-card,
+  .service-card .service-card-image,
+  .service-grid.show-all-services .service-card-extra {
+    animation: none;
+    transition: none;
   }
 }

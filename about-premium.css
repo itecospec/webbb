@@ -632,3 +632,54 @@
     grid-column: auto;
   }
 }
+/* Reduce empty space at the top of the About hero */
+.about-new-hero {
+  min-height: 620px;
+}
+
+.about-new-hero-layout {
+  min-height: 620px;
+  align-items: start;
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.about-new-hero-copy {
+  align-self: start;
+}
+
+/* Keep the information card lower on the right */
+.about-new-hero-card {
+  align-self: end;
+  margin-bottom: 55px;
+}
+
+@media (max-width: 850px) {
+  .about-new-hero,
+  .about-new-hero-layout {
+    min-height: auto;
+  }
+
+  .about-new-hero-layout {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+
+  .about-new-hero-card {
+    align-self: auto;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-new-hero-layout {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+}
+
+/* Straight bottom edge for the About page hero */
+.about-new-hero::after {
+  display: none !important;
+  content: none !important;
+}
