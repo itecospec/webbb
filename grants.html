@@ -7,6 +7,148 @@
   <title>SEAI Home Energy Grants | Ecospec</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="grants.css">
+
+  <style>
+    /* Styles for the grant visual used in this page's actual HTML. */
+    .grants-hero-layout {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 410px);
+      gap: clamp(45px, 7vw, 100px);
+      align-items: center;
+      padding: 72px 0;
+    }
+
+    .grants-hero-visual {
+      position: relative;
+      min-height: 410px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      padding: 38px;
+      border: 1px solid rgba(255, 255, 255, .22);
+      border-radius: 28px;
+      background:
+        linear-gradient(145deg, rgba(116, 191, 46, .96), rgba(8, 122, 54, .98));
+      color: #fff;
+      box-shadow: 0 28px 70px rgba(0, 0, 0, .28);
+    }
+
+    .grant-visual-pattern {
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      top: -95px;
+      right: -75px;
+      border: 50px solid rgba(255, 255, 255, .08);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .grant-visual-main,
+    .grant-visual-note {
+      position: relative;
+      z-index: 1;
+    }
+
+    .grant-visual-main > span {
+      display: block;
+      margin-bottom: 18px;
+      font-size: .76rem;
+      font-weight: 900;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .grant-visual-main > strong {
+      display: block;
+      max-width: 330px;
+      font-size: clamp(3rem, 5vw, 4.7rem);
+      line-height: .92;
+      letter-spacing: -.055em;
+    }
+
+    .grant-visual-main > p {
+      max-width: 300px;
+      margin: 20px 0 0;
+      color: rgba(255, 255, 255, .8);
+      line-height: 1.6;
+    }
+
+    .grant-visual-note {
+      display: grid;
+      gap: 5px;
+      margin-top: 42px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255, 255, 255, .25);
+    }
+
+    .grant-visual-note strong {
+      font-size: 1.05rem;
+    }
+
+    .grant-visual-note span {
+      color: rgba(255, 255, 255, .72);
+      line-height: 1.55;
+    }
+
+    @media (max-width: 1050px) {
+      .grants-hero-layout {
+        grid-template-columns: minmax(0, 1fr) 330px;
+        gap: 35px;
+      }
+
+      .grants-hero-visual {
+        display: flex;
+        min-height: 350px;
+        padding: 30px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .grants-hero-layout {
+        grid-template-columns: 1fr;
+        padding: 50px 0 58px;
+      }
+
+      .grants-hero-visual {
+        min-height: 330px;
+        padding: 28px;
+        border-radius: 22px;
+      }
+
+      .grant-visual-main > strong {
+        font-size: clamp(3rem, 16vw, 4.2rem);
+      }
+    }
+
+    /* Keep the stylesheet's actual grant feature card visible responsively. */
+    @media (max-width: 1050px) {
+      .grant-hero-card {
+        display: block;
+        position: relative;
+        right: auto;
+        bottom: auto;
+        width: min(calc(100% - 40px), 700px);
+        margin: -80px auto 55px;
+        border-radius: 20px;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .grant-hero-card {
+        width: min(calc(100% - 40px), 520px);
+        margin: -65px auto 40px;
+        padding: 24px 28px;
+      }
+
+      .grant-hero-card strong {
+        font-size: clamp(2.5rem, 13vw, 3.15rem);
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="header">
@@ -47,7 +189,10 @@
 
   <main class="grants-page">
     <section class="grants-hero">
-      <div class="wrap grants-hero-layout">
+      <div class="grants-hero-media" aria-hidden="true"></div>
+      <div class="grants-hero-overlay" aria-hidden="true"></div>
+
+      <div class="wrap grants-hero-inner">
         <div class="grants-hero-copy">
           <div class="eyebrow grant-green">SEAI Home Energy Grants</div>
           <h1>Support for a warmer, more efficient home.</h1>
@@ -57,20 +202,13 @@
             <a class="grant-text-link" href="#eligibility">Check eligibility <span>→</span></a>
           </div>
         </div>
-
-        <div class="grants-hero-visual" aria-label="SEAI grant information">
-          <div class="grant-visual-pattern" aria-hidden="true"></div>
-          <div class="grant-visual-main">
-            <span>Insulation support</span>
-            <strong>Up to €4,500</strong>
-            <p>Depending on the insulation measure and property type.</p>
-          </div>
-          <div class="grant-visual-note">
-            <strong>Apply first</strong>
-            <span>Grant approval should be in place before eligible work starts.</span>
-          </div>
-        </div>
       </div>
+
+      <aside class="grant-hero-card" aria-label="SEAI grant information">
+        <span>Insulation support</span>
+        <strong>Up to €4,500</strong>
+        <small>Depending on the insulation measure and property type.</small>
+      </aside>
     </section>
 
     <section class="grant-intro">
@@ -125,11 +263,6 @@
             <div class="value-card-top"><span>Internal wall insulation</span><strong>Up to €4,500</strong></div>
             <p>Grant values vary from apartments and terraced homes through to detached properties.</p>
           </article>
-
-
-
-
-
 
 
         </div>
