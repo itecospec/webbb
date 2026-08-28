@@ -4,16 +4,30 @@
 
 .airtight-page{overflow:hidden}
 .airtight-green{color:var(--green-dark)}
+.hero {
+  background-image: url("images/membrane-desktop.png");
+  background-size: cover;
+  background-position: center;
+}
 
+@media (max-width: 768px) {
+  .hero {
+    background-image: url("images/membrane-mobile.png");
+    background-position: center top;
+    min-height: 100svh;
+  }
+}
 .airtight-hero{
   position:relative;min-height:735px;display:grid;align-items:center;
   overflow:hidden;background:#10271d
 }
 .airtight-hero-image{
   position:absolute;inset:0;
-  background:url("images/airtightness.jpeg") center/cover no-repeat;
+  background:url("images/airt.png") center/cover no-repeat;
   transform:scale(1.02)
 }
+
+
 .airtight-hero-overlay{
   position:absolute;inset:0;
   background:
@@ -177,3 +191,4 @@
   }
   .airtight-service-copy h2{font-size:clamp(2.2rem,10vw,3.2rem)}
 }
+
