@@ -595,3 +595,20 @@
     font-size: clamp(2.2rem,10vw,3.2rem);
   }
 }
+
+/* Keep the spray-foam photograph square and prevent forced cropping */
+.attic-material-foam .attic-material-image {
+  min-height: 0;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  background: #e8e4d9;
+}
+
+.attic-material-foam .attic-material-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}

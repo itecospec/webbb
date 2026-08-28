@@ -16,25 +16,34 @@
 /* HERO — same visual language as the homepage hero */
 .about-new-hero {
   position: relative;
+  isolation: isolate;
   min-height: 690px;
   display: grid;
   align-items: center;
   overflow: hidden;
-  background: #3f5b48;
+  background: #0b281c;
 }
 
 .about-new-hero-image {
   position: absolute;
   inset: 0;
-  background: url("images/about-hero.jpg") center 44% / cover no-repeat;
+  z-index: 0;
+  background: url("images/Sprayer.png") center right / cover no-repeat;
 }
 
 .about-new-hero-shade {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(90deg, rgba(15,25,20,.76), rgba(15,25,20,.22) 64%, rgba(15,25,20,.08)),
-    radial-gradient(circle at 72% 30%, rgba(116,191,46,.18), transparent 31%);
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(7,30,21,.99) 0%,
+    rgba(7,30,21,.95) 34%,
+    rgba(7,30,21,.72) 52%,
+    rgba(7,30,21,.22) 72%,
+    rgba(7,30,21,.04) 100%
+  );
 }
 
 .about-new-hero-layout {
@@ -106,11 +115,13 @@
 
 .about-new-hero-card {
   padding: 26px 30px;
+  border: 1px solid rgba(255,255,255,.45);
   border-radius: 20px;
-  background: rgba(255,255,255,.94);
+  background: rgba(255,255,255,.88);
   color: var(--charcoal);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(14px);
+  box-shadow: 0 24px 65px rgba(0,0,0,.22);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .about-new-hero-card span {
@@ -506,6 +517,19 @@
 }
 
 @media (max-width: 1050px) {
+  .about-new-hero-image {
+    background-position: 68% center;
+  }
+
+  .about-new-hero-shade {
+    background: linear-gradient(
+      180deg,
+      rgba(7,30,21,.62) 0%,
+      rgba(7,30,21,.86) 55%,
+      rgba(7,30,21,.98) 100%
+    );
+  }
+
   .about-new-hero-layout {
     grid-template-columns: 1fr;
     gap: 34px;
@@ -543,11 +567,16 @@
   }
 
   .about-new-hero-image {
-    background-position: 62% center;
+    background-position: 72% center;
   }
 
   .about-new-hero-shade {
-    background: linear-gradient(180deg,rgba(15,25,20,.42),rgba(15,25,20,.9) 68%);
+    background: linear-gradient(
+      180deg,
+      rgba(7,30,21,.56) 0%,
+      rgba(7,30,21,.88) 58%,
+      rgba(7,30,21,.98) 100%
+    );
   }
 
   .about-new-hero-layout {

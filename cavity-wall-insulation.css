@@ -11,7 +11,7 @@
 
 .cavity-hero {
   position: relative;
-  min-height: calc(100svh - 94px);
+  min-height: 735px;
   display: grid;
   align-items: center;
   overflow: hidden;
@@ -47,9 +47,9 @@
   z-index: 2;
   display: grid;
   grid-template-columns: minmax(0,1fr) 380px;
-  gap: clamp(38px,5vw,70px);
-  align-items: center;
-  padding: clamp(42px,6vh,68px) 0;
+  gap: 70px;
+  align-items: end;
+  padding: 110px 0 105px;
 }
 
 .cavity-hero-copy {
@@ -61,24 +61,24 @@
   max-width: 800px;
   margin: 0;
   color: #fff;
-  font-size: clamp(3.1rem,5.4vw,5.35rem);
+  font-size: clamp(3.3rem,6.4vw,6.35rem);
   line-height: .96;
   letter-spacing: -.055em;
 }
 
 .cavity-hero-copy p {
   max-width: 690px;
-  margin: 22px 0 0;
+  margin: 28px 0 0;
   color: rgba(255,255,255,.82);
   font-size: clamp(1.05rem,1.55vw,1.23rem);
-  line-height: 1.62;
+  line-height: 1.75;
 }
 
 .cavity-hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
-  margin-top: 28px;
+  margin-top: 36px;
 }
 
 .cavity-hero-panel {
@@ -461,28 +461,30 @@
 
 /* RESPONSIVE */
 
+/* Keep the complete hero visible on standard desktop screens. */
+@media (min-width: 1051px) {
+  .cavity-hero {
+    min-height: clamp(600px, calc(100vh - 86px), 680px);
+  }
+
+  .cavity-hero-inner {
+    gap: 45px;
+    padding: 55px 0 50px;
+  }
+
+  .cavity-hero-copy h1 {
+    font-size: clamp(3.3rem, 5.5vw, 5.5rem);
+  }
+}
+
 @media (max-width: 1050px) {
   .cavity-hero-inner {
     grid-template-columns: 1fr;
-    gap: 24px;
-    padding: 38px 0;
+    gap: 35px;
   }
 
   .cavity-hero-panel {
-    display: grid;
-    grid-template-columns: repeat(3,minmax(0,1fr));
-    gap: 0 18px;
-    max-width: none;
-    padding: 22px;
-  }
-
-  .cavity-panel-label {
-    grid-column: 1 / -1;
-  }
-
-  .cavity-hero-panel > div {
-    grid-template-columns: 42px 1fr;
-    padding: 14px 0;
+    max-width: 500px;
   }
 
   .cavity-intro-grid,
@@ -524,11 +526,6 @@
 
   .cavity-hero-inner {
     padding: 95px 0 70px;
-  }
-
-  .cavity-hero-panel {
-    display: block;
-    padding: 24px;
   }
 
   .cavity-hero-actions {
